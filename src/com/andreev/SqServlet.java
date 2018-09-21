@@ -10,7 +10,12 @@ import java.io.PrintWriter;
 
 public class SqServlet extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException{
+
+        int k = (int)req.getAttribute("k");
+
+        k = k*k;
+
         PrintWriter out = res.getWriter();
-        out.println("Request from ADD was accepted");
+        out.println("Square result is " + k);
     }
 }
