@@ -2,9 +2,7 @@ package com.andreev;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 
 public class AddServlet extends HttpServlet {
@@ -14,7 +12,11 @@ public class AddServlet extends HttpServlet {
 
         int k = i+j;
 
-        res.sendRedirect("sq?k=" + k);
+        Cookie cookie = new Cookie("k", k + "");
+        res.addCookie(cookie);
+
+
+        res.sendRedirect("sq");
 
         //RequestDispatcher rd = req.getRequestDispatcher("/sq");
         //rd.forward(req, res);
