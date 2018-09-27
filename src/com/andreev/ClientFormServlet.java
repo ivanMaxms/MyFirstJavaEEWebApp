@@ -5,15 +5,16 @@ import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.io.IOException;
 
-public class AddServlet extends HttpServlet {
+public class ClientFormServlet extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
-        int i = Integer.parseInt(req.getParameter("num1"));
-        int j = Integer.parseInt(req.getParameter("num2"));
+        String login = req.getParameter("num1");
+        String password = req.getParameter("num2");
 
-        int k = i+j;
+        Cookie loginCookie = new Cookie("login", login);
+        Cookie passwordCookie = new Cookie("password", password);
 
-        Cookie cookie = new Cookie("k", k + "");
-        res.addCookie(cookie);
+        res.addCookie(loginCookie);
+        res.addCookie(passwordCookie);
 
 
         res.sendRedirect("sq");

@@ -4,20 +4,20 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <servlet>
-        <servlet-name>AddServlet</servlet-name>
-        <servlet-class>com.andreev.AddServlet</servlet-class>
+        <servlet-name>ClientFormServlet</servlet-name>
+        <servlet-class>com.andreev.ClientFormServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>AddServlet</servlet-name>
+        <servlet-name>ClientFormServlet</servlet-name>
         <url-pattern>/add</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>SqServlet</servlet-name>
-        <servlet-class>com.andreev.SqServlet</servlet-class>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.andreev.LoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>SqServlet</servlet-name>
+        <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/sq</url-pattern>
     </servlet-mapping>
 </web-app>
